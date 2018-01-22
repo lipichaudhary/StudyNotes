@@ -1,0 +1,35 @@
++When an object is ready for garbage collection?
+When there are no longer any reference variables referring to it, OR when it is orphaned in an island(when there are no references to access it).
+Example:
+An island being an object that has a reference variable pointing to it, however that object has no reference variables pointing to it.
+
+class A { int i = 5; }
+class B { A a = new A(); }
+class C {
+   B b;
+   public static void main(String args[]) {
+      C c = new C();
+      c.b = new B();
+      // instance of A, B, and C created
+      c.b = null;
+      // instance of B and A eligible to be garbage collected.
+   }
+EDIT: Just want to point out that even though the instance of A has a reference, it is on an island now because the instance of B 
+does not have a reference to it. The A instance is eligible for garbage collection.
+
+
+WAYS TO Dereference an object(reference)/ Garbage collecting the objects:
+1. By nulling a reference:
+   Employee e= new Employee();
+   e = null;  // hence this object is ready for garbage collection
+2. By Assigning a reference to another :
+   Employee e1 = new Employee();
+   Employee e2 = new Employee();
+   // before assigning the hascode value for e.g. be e1= 1234 e2=5678 
+   e1=e2; //Now the first object refered by e1 will be ready for garbage collection.
+   nw after assigning the e2 object to e1 , e1= 5678 and e2= 5678 as e2 is assigned to e1 Therefore, e1 is ready for garbage collection 
+   System.gc(); // thrgh this method u can invoke GC(Garbage Collector) this method is found in System and runtime classes.
+   
+3. By anonymous object
+   new Employee();
+   
