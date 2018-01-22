@@ -16,4 +16,28 @@ There are 3 ways to do it that are :
 		System.out.println(sb.toString());
     
   c) Using Recursion 
+  
+  
+  private static String recursiveMethod(String str) {
+		// TODO Auto-generated method stub
+		public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the string ");
+		String name = sc.nextLine();
+		String revName = recursiveMethod(name);
+		System.out.println(revName);
+	}
+
+	private static String recursiveMethod(String str) {
+		
+		if(str.length()<2){
+			return str;
+		}
+		else
+		{
+		   return recursiveMethod(str.substring(1))+str.charAt(0);
+		}
+		}
+		}
      
