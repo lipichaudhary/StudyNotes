@@ -1,0 +1,21 @@
+Conduent Business Services:
+Interview process: 
+1. Online Test 
+2. Technical Round
+3. Managerial Round
+
+1. Online Test: It was conducted on HackerEarth
+objective programming questions on java: 
+garbage collection ( 3 quest each 2 marks)
+hibernate (3 questions each 4 marks)
+all java programming questions were of 2 marks except hibernate one 
+2 java programs to do :each 10 marks: for which in-built IDE is provided where only you can ctr+space to check methods but you should know
+the methods properly coz it will not show you all options as it shows in eclipse 
+a) WAP to reverse a string
+b) Count the numjber of occurences in a string for a letter.
+2 SQL Query to do: each 5 marks:
+a) 3rd highest salary for an Employee table
+b) Average Marks to be selected for each class: there were 2 classes i.e. class 3and class4 and in each class there were 3-4 students 
+now their average marks need to be calculated.
+
+I was out in online test (should have done but lack of practice i can say , will do better next tym :) )
