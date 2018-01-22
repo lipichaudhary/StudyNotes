@@ -1,0 +1,19 @@
+1. WAP to reverse a string:
+There are 3 ways to do it that are :
+  a) Using StringBuffer or StringBuilder
+  String name="hello";
+  String revName;
+  StringBuffer sb = new StringBuffer();
+	sb.append(name);
+	revName = sb.reverse().toString();
+  
+  b) Using toCharArray() i.e iterative method
+    char[] chArray = name.toCharArray();
+		for(int i=chArray.length-1;i>=0;i--)
+		{
+		  sb.append(chArray[i]);	
+		}
+		System.out.println(sb.toString());
+    
+  c) Using Recursion 
+     
