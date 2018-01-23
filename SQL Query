@@ -1,0 +1,10 @@
+1. Find the third highest salary from employee table.
+   select MIN(salary) from (select salary from Employee order by salary DESC limit 3);
+   
+   // we can use Distinct and TOP ; need to study for this 
+
+2. Find the second highest salary from employee table
+   select MAX(salary) AS salary from Employee where salary< (select MAX(salary) from employee);   
+
+3.Find the average marks of students of a particular class 
+   
