@@ -26,11 +26,19 @@ Class Employee{
       return EmpPanCard;
   }
 }      
-/* from javatpoint */
+/* from javatpoint  https://www.javatpoint.com/how-to-create-immutable-class */
 The above class is immutable because:
 
 The instance variable of the class is final i.e. we cannot change the value of it after creating an object.
 The class is final so we cannot create the subclass.
 There is no setter methods i.e. we have no option to change the value of the instance variable.
 These points makes this class as immutable.
+
+______Extra Info______
+Use immutable classes provided by JDK as key in Map to avoid implementation of hashCode() and equals() for our custom class.
+Also immutable classes make sure that hashCode() and equals() will not change in future that will solve any issue with mutability
+
+How can we achieve thread safety in Java?
+There are several ways to achieve thread safety in java – synchronization, atomic concurrent classes, implementing 
+concurrent Lock interface, using volatile keyword, using immutable classes and Thread safe classes. Learn more at thread safety tutorial.
 
