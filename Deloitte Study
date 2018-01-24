@@ -1,0 +1,5 @@
+Immutable Class:
+Class whose object cannot be modified once created.If any modification is done then it will result in new object.
+Modification to an immutable object results in new object.for example, String in java is immutable. 
+Mostly, immutable are final in java in order to prevent sub class from overriding methods in Java which can compromise Immutability.
+Another way of achieving immutablity without making them final is by making them private, and also not modifying them except in constructor.
