@@ -1,0 +1,27 @@
+today i got to know my silly mistake or i can say lack of practice :p
+Print the elements of array  in reverse order as a single line of space-separated numbers.
+Sample Input
+4
+1 4 3 2
+Sample Output
+2 3 4 1
+
+usually we will use System.out.println(); to print the elements , nut in this case we have to use System.out.print();
+then only it will print in same line coz println means to print it in next line. 
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i < n; i++){
+            arr[i] = in.nextInt();
+        }
+        in.close();
+        for(int j=arr.length-1;j>=0;j--){
+            System.out.print(arr[j]+" ");   // REMEMBER WE HAVE USED print(); instead of println(); in order to print it in same line
+        }
+        
+    }
+}
