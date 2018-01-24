@@ -1,0 +1,22 @@
+__________learning from javatpoint _________
+
+SQL - Structured Query Language is a database language which is used to craete new database , tables or views.
+Why SQL used/required?  _______   
+ It creates, updates, insert and delete rows from a table.
+what SQL does? ______
+ It allows user to describe the data. 
+ It allows the user to create and drop the database and tables.
+ It allows user to define the data in database and manipulate it when needed. 
+ It allows user to create the views, functions and stored procedure in a database.
+ It allows user to set the permission on views, stored procedure and tables.
+ 
+Database?
+Database is a collection of data.It is a systematic way of organising the data which is used to create, manipulate and control it with ease. 
+Now, In terms of Computer science and IT many websites which are dynamic requires a database to contain all the information related to the 
+website and can be accessed and stored through the website itself.
+
+RDBMS?
+
+
+      
+
