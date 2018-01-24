@@ -3,3 +3,26 @@ Class whose object cannot be modified once created.If any modification is done t
 Modification to an immutable object results in new object.for example, String in java is immutable. 
 Mostly, immutable are final in java in order to prevent sub class from overriding methods in Java which can compromise Immutability.
 Another way of achieving immutablity without making them final is by making them private, and also not modifying them except in constructor.
+
+There are many immutable classes in java like String, short, byte, Integer, Long, Float, Boolean, Double etc.We can say, all wrapper classes are 
+immutable and String is immutable.
+
+How to create an immutable class?
+We can create immutable classes
+
+Rules:
+1. Make class as final so that no subclasses can be formed.
+2. Make its instance variables as final so that its value cannot be changed once an object is created.
+3. There should not be any setter methods for these instance variables so we get no option to change its value.
+
+Class Employee{
+  final String EmpPanCard;
+  
+  public Employee(String EmpPanCard){
+    this.EmpPanCard = EmpPanCard;
+  }
+  
+  private String getEmpPanCard(){
+      return EmpPanCard;
+  }
+}      
