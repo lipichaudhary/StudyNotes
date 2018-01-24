@@ -1,0 +1,4 @@
+Java Maps
+Map is an interface that provides a blueprint for data structures that take  pairs and map keys to their associated values 
+(it's important to note that both the  and the  must be Objects and not primitives). 
+The implementation is done by implementing classes such as HashMap or LinkedHashMap. 
