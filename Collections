@@ -2,3 +2,13 @@ Java Maps
 Map is an interface that provides a blueprint for data structures that take  pairs and map keys to their associated values 
 (it's important to note that both the  and the  must be Objects and not primitives). 
 The implementation is done by implementing classes such as HashMap or LinkedHashMap. 
+
+HashMap : it have key/value pairs
+No duplicate keys are allowed.
+if any duplicate key is inserted then its old value is replaced by new value.
+there can be suplicate values 
+Only one null key is allowed but there can be multiple null values.
+
+HashSet: means no duplicate elements. It have only elements which can be either key or value.
+It doesn't have key value both.
+it allows only one null element(key or value).
