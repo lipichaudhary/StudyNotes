@@ -109,6 +109,19 @@ public class Solution {
     }
 }
 
+Singleton class:
+the class which have only one instance. 
+
+How to craete a singleton class?
+Rules:
+1. Make its constructor as private so that its object can be instantiated only once.
+2. Make its members as static
+
+To create a singleton class , we need:
+1. Private constructor: so that no other class can instantiate this class.
+2. Static member: so that its memory is created only once and it contains the instance of the singleton class.
+3. Static factory method: create a static getter method its name can be anythng which returns the instance of the class.
+
 
 
 
