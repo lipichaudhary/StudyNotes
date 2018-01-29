@@ -1,0 +1,7 @@
+Difference between 
+
+
+what is classloader?
+class Loader is a part of JVM and it does nothing but loading the class for JVM from the library where the demanded class is present.
+JVM doesn't need to know the name of the class needed and the dependent classes on it.
+There are many types of class loaders , the 3 important ones are: Bootstrap, extension and System class loader
