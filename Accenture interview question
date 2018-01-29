@@ -1,7 +1,93 @@
 Difference between 
 
 
-what is classloader?
+what is classloader? It loads the JAVA class file into JVM.
 class Loader is a part of JVM and it does nothing but loading the class for JVM from the library where the demanded class is present.
 JVM doesn't need to know the name of the class needed and the dependent classes on it.
 There are many types of class loaders , the 3 important ones are: Bootstrap, extension and System class loader
+1. Bootstrap loader: this is at the topmost position in hierarchy of class loaders.
+It loads the core java classes like java.util, java.lang etc.These are the classes are part of the java runtime environment.
+Bootstrap classloader is the native implementation and so they may differ across different JVMs.
+
+2. Extension : JAVA_HOME/jre/lib/ext contains the jar packages which are the extensions of the standard core java classes.Extension classloader
+loads the classes from ext folder.Using the system environment property java.ext.dirs you can add 'ext' folders and jars files to be loaded 
+using extensions class loader.
+
+3. System class loader: Java classes that are available in the classpath are loaded using system class loader.
+
+Java ClassLoader are hierarchical and whenever a request is raised to load a class, it delegates it to its parent and in this way 
+uniqueness is maintained in the runtime environment. 
+If the parent class loader doesn’t find the class then the class loader itself tries to load the class.
+
+Class loader can load classes from one level above its hierarchy. First level is bootstrap class loader, 
+second level is extensions class loader and third level is system class loader.
+
+
+package org.hackerrank;
+
+import java.util.Scanner;
+
+public class Student extends Person{
+	private static int[] testScores;
+	public static String firstName;
+	public static String lastName;
+	public static int idNumber;
+	
+	 /*public Student(String firstName,String lastName, int idNumber, int[] testScores){
+		    super(firstName, lastName, idNumber);
+			this.testScores = testScores;
+	        //this.testScores = testScores;
+	        
+	    }*/
+	 
+	 public Student(){
+		    super(firstName, lastName, idNumber);
+			
+	        //this.testScores = testScores;
+	        
+	    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Student st = new Student();
+		char c= st.calculate();
+		st.printPerson();
+		System.out.println("Grade: "+c);
+	}
+	
+	public char calculate()
+	{
+      Scanner sc = new Scanner(System.in);
+      String str=sc.nextLine();
+      String strArry[] = str.split(" ");
+      firstName = strArry[0];
+      lastName = strArry[1];
+      idNumber = Integer.parseInt(strArry[2]);
+     
+      int size = sc.nextInt();
+      int sum=0;
+      testScores = new int[size];
+      for(int i=0;i<size;i++){
+    	  testScores[i] = sc.nextInt();
+    	  sum = sum+  testScores[i];
+      }
+      
+      int avg = sum/size;
+      if(avg<=100 && avg>=90){
+    	  return 'O';
+      }
+      else if(avg>=80 && avg<=90)
+      return 'E' ;
+      else if(avg>=70 && avg<=80)
+    	  return 'A';
+      else if(avg>=60 && avg<=70)
+    	  return 'P';
+      else if(avg>=50 && avg<=60)
+    	  return 'D';
+      else
+    	  return 'T';
+      
+	}
+
+	}
