@@ -1,0 +1,36 @@
+difference b/w association, aggregation and composition? // read it from geekforgeeks
+https://www.geeksforgeeks.org/association-composition-aggregation-java/
+
+Association can be one-to-one, one-to-many, many-to-one, many-to-many.
+In above example two separate classes Bank and Employee are associated through their Objects. Bank can have many employees,
+So it is a one-to-many relationship.
+
+Aggregation
+
+It is a special form of Association where:
+It represents Has-A relationship.
+It is a unidirectional association i.e. a one way relationship. For example, department can have students but vice versa is not possible 
+and thus unidirectional in nature.
+In Aggregation, both the entries can survive individually which means ending one entity will not effect the other entity
+
+When do we use Aggregation ??
+Code reuse is best achieved by aggregation.
+
+Composition
+
+Composition is a restricted form of Aggregation in which two entities are highly dependent on each other.
+
+It represents part-of relationship.
+In composition, both the entities are dependent on each other.
+When there is a composition between two entities, the composed object cannot exist without the other entity.
+
+In above example a library can have no. of books on same or different subjects. So, If Library gets destroyed then 
+All books within that particular library will be destroyed. i.e. book can not exist without library. That’s why it is composition.
+
+Aggregation vs Composition
+
+Dependency: Aggregation implies a relationship where the child can exist independently of the parent. 
+For example, Bank and Employee, delete the Bank and the Employee still exist. whereas Composition implies a relationship where 
+the child cannot exist independent of the parent. Example: Human and heart, heart don’t exist separate to a Human
+Type of Relationship: Aggregation relation is “has-a” and composition is “part-of” relation.
+Type of association: Composition is a strong Association whereas Aggregation is a weak Association.
