@@ -28,10 +28,12 @@ package org.hackerrank;
 import java.util.Scanner;
 
 public class Student extends Person{
+	 
+	private static String firstName;
+	private static String lastName;
+	private static int idNumber;
 	private static int[] testScores;
-	public static String firstName;
-	public static String lastName;
-	public static int idNumber;
+	private  int avg;
 	
 	 /*public Student(String firstName,String lastName, int idNumber, int[] testScores){
 		    super(firstName, lastName, idNumber);
@@ -40,54 +42,174 @@ public class Student extends Person{
 	        
 	    }*/
 	 
-	 public Student(){
+	 public Student(String firstName, String lastName, int idNumber, int[] testScores){
 		    super(firstName, lastName, idNumber);
-			
-	        //this.testScores = testScores;
-	        
+		    this.testScores =testScores;
 	    }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Student st = new Student();
-		char c= st.calculate();
+		Scanner sc = new Scanner(System.in);
+	      String str=sc.nextLine();
+	      String strArry[] = str.split(" ");
+	      firstName = strArry[0];
+	      lastName = strArry[1];
+	      idNumber = Integer.parseInt(strArry[2]);
+	      int size = sc.nextInt();
+	      int sum=0;
+	      testScores = new int[size];
+	      for(int i=0;i<size;i++){
+	    	  testScores[i] = sc.nextInt();
+	    	  sum = sum+  testScores[i];
+	      }
+	    
+	       
+	    
+		Student st = new Student(firstName, lastName, idNumber, testScores);
+		st.avg = (sum/size);
 		st.printPerson();
-		System.out.println("Grade: "+c);
+		System.out.println("Grade: "+st.calculate());
 	}
 	
 	public char calculate()
 	{
-      Scanner sc = new Scanner(System.in);
-      String str=sc.nextLine();
-      String strArry[] = str.split(" ");
-      firstName = strArry[0];
-      lastName = strArry[1];
-      idNumber = Integer.parseInt(strArry[2]);
-     
-      int size = sc.nextInt();
-      int sum=0;
-      testScores = new int[size];
-      for(int i=0;i<size;i++){
-    	  testScores[i] = sc.nextInt();
-    	  sum = sum+  testScores[i];
-      }
-      
-      int avg = sum/size;
-      if(avg<=100 && avg>=90){
+		
+      if(avg<=100 && avg>=90)
+      {
     	  return 'O';
       }
       else if(avg>=80 && avg<=90)
-      return 'E' ;
-      else if(avg>=70 && avg<=80)
-    	  return 'A';
-      else if(avg>=60 && avg<=70)
-    	  return 'P';
-      else if(avg>=50 && avg<=60)
-    	  return 'D';
-      else
-    	  return 'T';
+      {
+    	  return 'E' ;
+      }
+    	  else if(avg>=70 && avg<=80)
+    	  {
+    		  return 'A';
+    	  }
+    	  else if(avg>=60 && avg<=70)
+    	  {
+    		  return 'P';
+    	  }
+    	  else if(avg>=50 && avg<=60)
+    	  {
+    		  return 'D';
+    	  }
+    	  else
+    	  {
+    		  return 'T';
+    	  }
       
+	}
+
+	}
+//////////////////////////////////
+another way 
+
+
+
+
+
+
+package org.hackerrank;
+
+import java.util.Scanner;
+
+
+
+public class Student1 extends Person{
+	 
+	private static String firstName;
+	private static String lastName;
+	private static int idNumber;
+	private static int[] testScores;
+	//private  int avg;
+	
+	 /*public Student(String firstName,String lastName, int idNumber, int[] testScores){
+		    super(firstName, lastName, idNumber);
+			this.testScores = testScores;
+	        //this.testScores = testScores;
+	        
+	    }*/
+	 
+	 public  Student1(String firstName, String lastName, int idNumber, int[] testScores){
+		    super(firstName, lastName, idNumber);
+		    this.testScores =testScores;
+	    }
+
+	/*public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+	      String str=sc.nextLine();
+	      String strArry[] = str.split(" ");
+	      firstName = strArry[0];
+	      lastName = strArry[1];
+	      idNumber = Integer.parseInt(strArry[2]);
+	      int size = sc.nextInt();
+	      int sum=0;
+	      testScores = new int[size];
+	      for(int i=0;i<size;i++){
+	    	  testScores[i] = sc.nextInt();
+	    	  sum = sum+  testScores[i];
+	      }
+	    
+	       
+	    
+		Student1 st = new Student1(firstName, lastName, idNumber, testScores);
+		st.avg = (sum/size);
+		st.printPerson();
+		System.out.println("Grade: "+st.calculate());
+	}*/
+	
+	public char calculate()
+	{
+		
+		Scanner sc = new Scanner(System.in);
+	      String str=sc.next();
+	      String strArry[] = str.split(" ");
+	      firstName = strArry[0];
+	      lastName = strArry[1];
+	      idNumber = Integer.parseInt(strArry[2]);
+	      int size = sc.nextInt();
+	      int sum=0;
+	      testScores = new int[size];
+	      for(int i=0;i<size;i++){
+	    	  testScores[i] = sc.nextInt();
+	    	  sum = sum+  testScores[i];
+	      }
+	    
+	      int avg = (sum/size);
+	    
+		Student1 st = new Student1(firstName, lastName, idNumber, testScores);
+		
+		
+		
+     if(avg<=100 && avg>=90)
+     {
+   	  return 'O';
+     }
+     else if(avg>=80 && avg<=90)
+     {
+   	  return 'E' ;
+     }
+   	  else if(avg>=70 && avg<=80)
+   	  {
+   		  return 'A';
+   	  }
+   	  else if(avg>=60 && avg<=70)
+   	  {
+   		  return 'P';
+   	  }
+   	  else if(avg>=50 && avg<=60)
+   	  {
+   		  return 'D';
+   	  }
+   	  else
+   	  {
+   		  return 'T';
+   	  }
+     
 	}
 
 	}
