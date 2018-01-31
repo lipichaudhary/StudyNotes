@@ -19,3 +19,17 @@ b) Average Marks to be selected for each class: there were 2 classes i.e. class 
 now their average marks need to be calculated.
 
 I was out in online test (should have done but lack of practice i can say , will do better next tym :) )
+
+
+Telephonic Interview:
+1. Difference b/w Path and ClassPath?
+Path: Once you installed java in your machine, It is required to set the PATH environment variable to conveniently run the executables
+(javac.exe, javadoc.exe,java.exe and so on) from any directory without having to type the full path of the command. For e.g.
+C:\javac TestClass.java
+otherwise u need to specify the whole path everytime you run it:
+C:\Java\jdk1.7.0\bin\javac TestClass.java
+
+ClassPath:Classpath is system environment variable which is used by java compiler and JVM to determine the exact location of required class file.
+C:\ProgramFiles\java\jdk1.6.0\bin
+
+Path variable is used to set the path for all java software tools like javac.exe,
