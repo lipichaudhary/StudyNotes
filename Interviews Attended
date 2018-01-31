@@ -32,4 +32,7 @@ C:\Java\jdk1.7.0\bin\javac TestClass.java
 ClassPath:Classpath is system environment variable which is used by java compiler and JVM to determine the exact location of required class file.
 C:\ProgramFiles\java\jdk1.6.0\bin
 
-Path variable is used to set the path for all java software tools like javac.exe,
+Path variable is used to set the path for all java software tools like javac.exe, javadoc.exe,java.exe and so on.
+ClassPath is used to set the path for the java classes.
+
+
