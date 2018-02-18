@@ -1,5 +1,30 @@
-Difference between 
+Online Test: SQL, CORE JAVA, OO Design, Spring , HIbernate, design pattern, javascript
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int MAX_Val = 4567889;
+		List<Integer> list = new ArrayList<Integer>();
+		for(int i =0;i<MAX_Val;i++){
+			list.add(0);
+			list.add(0);
+			list.add(1);
+		}
+		System.out.println(list.size());
+	} 
+Question : What is the size of array list : 
 
+a. 2
+b. 4567889
+c. 4567892
+d.13703667 
+
+Answer: 13703667 
+
+Technical Interview: Singleton class, Immutable class
+Employee table which collection to use so that no duplicate values r der + sorted elements r der :
+answer: TreeSet 
+Employee 2 objects e1 and e2 have same values now if in TreeSet we insert e2 then what wilkl happen to treeset whther it will get update 
+or replaced
+SQL: 2nd and 3rd highest salary
 
 what is classloader? It loads the JAVA class file into JVM.
 class Loader is a part of JVM and it does nothing but loading the class for JVM from the library where the demanded class is present.
