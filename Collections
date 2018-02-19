@@ -1,3 +1,6 @@
+How HashMap works in Java? --> best link to prepare for interview
+http://www.javainterviewpoint.com/hashmap-works-internally-java/
+
 Java Maps
 Map is an interface that provides a blueprint for data structures that take  pairs and map keys to their associated values 
 (it's important to note that both the  and the  must be Objects and not primitives). 
