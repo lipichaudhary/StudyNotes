@@ -9,7 +9,7 @@ The implementation is done by implementing classes such as HashMap or LinkedHash
 HashMap : it have key/value pairs
 No duplicate keys are allowed.
 if any duplicate key is inserted then its old value is replaced by new value.
-there can be suplicate values 
+there can be duplicate values but no duplicate key
 Only one null key is allowed but there can be multiple null values.
 
 HashSet: means no duplicate elements. It have only elements which can be either key or value.
