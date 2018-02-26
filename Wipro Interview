@@ -1,0 +1,10 @@
+1st Round: F2F
+Comparable vs Comparator in Java: Both are Interfaces which are used to sort the collection elements.
+Comparable:                                                                    Comparator
+1. Provides Single Sorting Sequence. In other words we can sort     1. Provides Multiple sorting sequence. Means we can sort the collection
+the collections on basis of single element i.e. id ,name or price     on the basis of multiple elememnts i.e. id,nameor price
+2. Affects the original class i.e. actual class is modified         2. Doesn't affect the original class i.e. actual class is not modified.
+3. It provides CompareTo()to sort the elements                      3. It provides Compare() to sort the elements
+4. It is found in java.lang package                                 4. Found in java.util package
+5. we can sort the list elements of comparable type by              5. We can sort the list elements of comparator type by
+Collections.sort(list);                                                Collections.sort(list,comparator);
