@@ -1,0 +1,6 @@
+XML Namespaces: Are used to avoid element name conflicts while merging 2 xml documents.
+Element names are defined by the developer. This often results in a conflict when trying to mix XML documents from different XML applications.
+
+When using prefixes in XML, a namespace for the prefix must be defined.
+The namespace can be defined by an xmlns attribute in the start tag of an element.
+The namespace declaration has the following syntax. xmlns:prefix="URI".
