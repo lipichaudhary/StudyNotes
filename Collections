@@ -12,6 +12,19 @@ if any duplicate key is inserted then its old value is replaced by new value.
 there can be duplicate values but no duplicate key
 Only one null key is allowed but there can be multiple null values.
 
-HashSet: means no duplicate elements. It have only elements which can be either key or value.
+HashSet: 1. means no duplicate elements.If you try to add a duplicate element in hashset then the old value would be overridden.
+2. Internal functioning of hashset uses hasMap but hashset have only elements which can be either key or value.
 It doesn't have key value both.
-it allows only one null element(key or value).
+3.it allows only one null element(key or value).
+4.No order is maintained.
+5.Implements SET interface. 
+6. It is non-synchronized.
+7. To make hashset as synchronized :     Set s=Collections.synchronizedSet(new hashSet());
+8.Backed by hashtable (actually a hashMap instance)
+9.It returns fail fast iterator. It will throw ConcurrentModificationException if hashSet is modified after creation of iterator,
+except the iterator's own remove();
+
+question: 3 ways to prevent concurrentModificationException to occur?
+
+
+
