@@ -7,5 +7,5 @@ will this above code compile?
 s= "welcome to infosys";
 output: infosys to welcome
 here we can use StringTokenizer
-
 3. why String is immutable
+4. Convert Array to ArrayList
