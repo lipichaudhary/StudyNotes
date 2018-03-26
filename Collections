@@ -33,5 +33,26 @@ hset.contains(Object o); // checks whether o is present in hashSet.
 Interview question: 
 3 ways to prevent concurrentModificationException to occur?
 
+Concurrent modification exception can occur either in single threaded or multi threaded environment.
+1. To avoid concurrentModificationException in multi threaded environment:
+a) if you are using JDK1.5 or higher version then you can use concurrent classes to avoid this exception i.e. 
+ConcurrentHashMap and CopyOnWriteArrayList classes we can use.
+b) As this exception occurs for collection classes, another approach is you can convert the list to an array and then iterate over it.
+but this approach is good for small or medium size list but if the list is large then it will affect the performance a lot.
+c) you can lock the list by putting it in synchronized block but this approach is not recommended as it will cease the effect of
+multithreading.
+
+2. To avoid exception in single threaded environment.
+a) Use the iterator's remove() function to remove the object from underlying collection.But in this case you can remove the same object
+and not any other object from the list.
+
+
+
+
+
+
+
+
+
 
 
