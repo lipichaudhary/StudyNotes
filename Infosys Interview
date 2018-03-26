@@ -1,0 +1,11 @@
+1 technical round: clear your core java concepts very well and have confidence on yourself then absolutely no one can stop you to clear 
+infosys interview :)
+
+1. List<Object> list = new ArrayList<String>();
+will this above code compile?
+2. write a program to reverse a string without using stringbuilder or stringbuffer
+s= "welcome to infosys";
+output: infosys to welcome
+here we can use StringTokenizer
+
+3. why String is immutable
