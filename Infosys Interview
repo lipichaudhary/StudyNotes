@@ -9,3 +9,5 @@ output: infosys to welcome
 here we can use StringTokenizer
 3. why String is immutable
 4. Convert Array to ArrayList
+5. Diff. b/w Exception and error
+6. Can you catch(means handle) all exceptions? (Not all like nullPointerException )
