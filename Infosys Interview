@@ -11,3 +11,7 @@ here we can use StringTokenizer
 4. Convert Array to ArrayList
 5. Diff. b/w Exception and error
 6. Can you catch(means handle) all exceptions? (Not all like nullPointerException )
+8. String s = new String("abc"); does this string s is stored in string pool ?
+9. how to make string s which is made newly by using new keyword to go to string pool?
+   Answer: user intern() function which will intern the string and fetch it from string pool 
+
