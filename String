@@ -1,0 +1,27 @@
+
+Study link: http://www.javamadesoeasy.com/2015/05/string-pool-string-literal-pool-string.html
+#at_pco=smlwn-1.0&at_si=5ab22dcbd70c7596&at_ab=per-2&at_pos=0&at_tot=1
+
+String s1 = "abc";
+No string with “abc” is there in pool, so JVM will create string in string pool and s1 will be a reference variable which will refer to it.
+
+ String s2 = new String("abc");
+string is created using new operator, it will force JVM to create new string in heap (not in string pool).
+
+ String s3 = "abc";
+string with “abc” is there in pool, so s3 will be a reference variable which will refer to “abc” in string pool.
+
+ String s4 = new String("abc");
+string is created using new operator, it will force JVM to create new string in heap (not in string pool).
+
+ String s5 = new String("abc").intern();
+string is created using new operator but intern method has been invoked on it, so s5 will be a reference variable which will refer to “abc” in string pool.
+
+
+About intern method in java
+Method is found in java.lang.String class
+When the intern method is invoked, if the string pool already contains a string equal to this String object as determined by the equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the string pool and a reference to this String object is returned.
+
+ Example in java -
+String s1 = "abc";    
+"abc" is created in string pool i.e. String object is added to the string pool.
