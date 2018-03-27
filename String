@@ -1,6 +1,24 @@
+Study link:
+http://www.javamadesoeasy.com/2015/05/string-is-immutable-in-java.html
 
-Study link: http://www.javamadesoeasy.com/2015/05/string-pool-string-literal-pool-string.html
+http://www.javamadesoeasy.com/2015/05/string-pool-string-literal-pool-string.html
 #at_pco=smlwn-1.0&at_si=5ab22dcbd70c7596&at_ab=per-2&at_pos=0&at_tot=1
+
+String is immutable in java means its state once craeted if changed it will result into another object.
+means if you change the string object then it will result into a new object.
+for e.g. String str = "abc";
+         S.O.P(str.concat("def")); // abcdef
+         S.O.P(str); // abc
+cd is concated with ab and a new string is formed in string pool as abcdef as no string with abcdef is present in pool but there
+won't be any reference variable to abcdef meanwhile str is pointing to abc.
+Therefore, str is referring to abc and string "abcdef" is eligible for garbage collection.
+         
+example2: String str="ab";
+          str="abcd";
+          so now abcd is refered by str while string"ab" is eligible for garbage collection.
+
+
+String pool concept:
 
 String s1 = "abc";
 No string with “abc” is there in pool, so JVM will create string in string pool and s1 will be a reference variable which will refer to it.
