@@ -31,6 +31,9 @@ hset.clear(); // remove all elements
 hset.contains(Object o); // checks whether o is present in hashSet.
 
 Interview question: 
+concurrentModificationException:
+Java collection classes are fail fast which means that if the collection will be changed 
+
 3 ways to prevent concurrentModificationException to occur?
 
 Concurrent modification exception can occur either in single threaded or multi threaded environment.
@@ -45,6 +48,17 @@ multithreading.
 2. To avoid exception in single threaded environment.
 a) Use the iterator's remove() function to remove the object from underlying collection.But in this case you can remove the same object
 and not any other object from the list.
+
+public class CopyOnWriteArrayList<E> extends Object implements List<E>, RandomAccess, Cloneable, Serializable
+A thread-safe variant of ArrayList in which all mutative operations (add, set, and so on) are implemented by making a fresh copy of the 
+underlying array.
+
+This is ordinarily too costly, but may be more efficient than alternatives when traversal operations vastly outnumber mutations,
+and is useful when you cannot or don't want to synchronize traversals,
+yet need to preclude interference among concurrent threads. 
+
+This array never changes during the lifetime of the iterator, so interference is impossible and the iterator is guaranteed not to throw 
+ConcurrentModificationException. 
 
 
 
