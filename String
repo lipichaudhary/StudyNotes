@@ -20,8 +20,21 @@ string is created using new operator but intern method has been invoked on it, s
 
 About intern method in java
 Method is found in java.lang.String class
-When the intern method is invoked, if the string pool already contains a string equal to this String object as determined by the equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the string pool and a reference to this String object is returned.
+When the intern method is invoked, if the string pool already contains a string equal to this String object as determined by
+the equals(Object) method, then the string from the pool is returned. Otherwise, this String object is added to the string pool 
+and a reference to this String object is returned.
 
  Example in java -
 String s1 = "abc";    
 "abc" is created in string pool i.e. String object is added to the string pool.
+String s5 = new String("abc").intern();
+
+Now what happens internally when the above statement is executed?
+when the intern method is invoked , if the string pool already contains a string which is equal to the string object will be determined by 
+equals(Object) method.
+As "abc" already exists in the string pool(bcz of String s1 = "abc")
+so, "abc".equals("abc") will return true and s5 will be reference varaible which will refer to the "abc" in the string pool.
+so, s1==s5 retuen true.
+
+
+
