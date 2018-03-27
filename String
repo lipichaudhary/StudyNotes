@@ -36,5 +36,14 @@ As "abc" already exists in the string pool(bcz of String s1 = "abc")
 so, "abc".equals("abc") will return true and s5 will be reference varaible which will refer to the "abc" in the string pool.
 so, s1==s5 retuen true.
 
+Why String Pool in java?
+As strings are widely used in java code and are immutable which allows them to be cached in memory to 
+save memory and increase the performance.
+Less no. of strings r created in heap memory so less work for garbage collector also.
+
+
+
+
+
 
 
