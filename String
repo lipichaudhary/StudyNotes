@@ -16,7 +16,13 @@ Therefore, str is referring to abc and string "abcdef" is eligible for garbage c
 example2: String str="ab";
           str="abcd";
           so now abcd is refered by str while string"ab" is eligible for garbage collection.
+Advantages of string being immutable:
+1.  hashcode of string is cached: JVM CACHED THE HASHCODE OF FREQUENTLY USED STRING in application.Therefore, JVM doesn't need to 
+calculate the hashcode again. Hence, it will incraese the performance of the application.
 
+2. Avoiding the security threats: String is used as parameter in many important java classes like network connection and file IO.
+if string would not hv been immutable then it would have caused serious security threats to application bcz any change made at one place 
+could have also changed String passed in these classes as well.
 
 String pool concept:
 
