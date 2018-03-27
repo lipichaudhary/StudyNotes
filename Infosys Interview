@@ -11,7 +11,11 @@ here we can use StringTokenizer
 4. Convert Array to ArrayList
 5. Diff. b/w Exception and error
 6. Can you catch(means handle) all exceptions? (Not all like nullPointerException )
-8. String s = new String("abc"); does this string s is stored in string pool ?
+8. String s2 = new String("abc"); does this string s is stored in string pool ?   
+   string is created using new operator, it will force JVM to create new string in heap (not in string pool).
+   
 9. how to make string s which is made newly by using new keyword to go to string pool?
    Answer: user intern() function which will intern the string and fetch it from string pool 
-
+String s5 = new String("abc").intern();
+string is created using new operator but intern method has been invoked on it, so s5 will be a reference variable which will refer 
+to “abc” in string pool.
