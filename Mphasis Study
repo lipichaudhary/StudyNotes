@@ -1,9 +1,17 @@
 Interview Questions
 
 Difference between SynchronizedMap and ConcurrentHashMap
-What's a singleton, and how would you enforce it
-What's an immutable object
-Is String immutable
+Answer: 
+SynchronizedMap                                 ConcurrentHashMap
+Allows one null key                             it doesn't aloow any null key and null values
+it synchronise the non-synchronized map         it is synchronised, and is designed for concurrency
+Collections.synchronizedMap()                   Improves performance
+
+
+What's a singleton, and how would you enforce it: its present in notes
+What's an immutable object : refer notes
+Is String immutable: refer notes
+
 Would String a = "abc" or new String("abc") cause new string objects to be created in the String pool
 Difference between HashMap and HashTable
 Use of Thread.join and what does it do
@@ -12,6 +20,14 @@ Different type of Spring bean scope
 
 Round 1 - What is the difference between Array and ArrayList?  
 Answer Question
+Array 
+Array is a fixed size data structure while ArrayList is not. 
+One need not to mention the size of Arraylist while creating its object. Even if we specify some initial capacity, 
+we can add more elements.
+Array can contain both primitive data types as well as objects of a class depending on the definition of the array. However, ArrayList only supports object entries, not the primitive data types.
+Note: When we do arraylist.add(1); : it converts the primitive int data type into an Integer object.
+
+
 Round 1 - Tell me the flow of the application when you write a program in AngularJS.  
 Answer Question
 Round 1 - What is Maven and why do we need it?  
