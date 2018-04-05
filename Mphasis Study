@@ -26,6 +26,10 @@ One need not to mention the size of Arraylist while creating its object. Even if
 we can add more elements.
 Array can contain both primitive data types as well as objects of a class depending on the definition of the array. However, ArrayList only supports object entries, not the primitive data types.
 Note: When we do arraylist.add(1); : it converts the primitive int data type into an Integer object.
+One more major difference between ArrayList and Array is that, you can not store primitives in ArrayList, it can only contain Objects. 
+While Array can contain both primitives and Objects in Java. 
+
+Read more: http://www.java67.com/2012/12/difference-between-array-vs-arraylist-java.html#ixzz5Bnv8Vofc
 
 
 Round 1 - Tell me the flow of the application when you write a program in AngularJS.  
