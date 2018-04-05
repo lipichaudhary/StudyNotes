@@ -9,7 +9,7 @@ means if you change the string object then it will result into a new object.
 for e.g. String str = "abc";
          S.O.P(str.concat("def")); // abcdef
          S.O.P(str); // abc
-cd is concated with ab and a new string is formed in string pool as abcdef as no string with abcdef is present in pool but there
+def is concated with abc and a new string is formed in string pool as abcdef as no string with abcdef is present in pool but there
 won't be any reference variable to abcdef meanwhile str is pointing to abc.
 Therefore, str is referring to abc and string "abcdef" is eligible for garbage collection.
          
