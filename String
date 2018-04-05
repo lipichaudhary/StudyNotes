@@ -4,7 +4,7 @@ http://www.javamadesoeasy.com/2015/05/string-is-immutable-in-java.html
 http://www.javamadesoeasy.com/2015/05/string-pool-string-literal-pool-string.html
 #at_pco=smlwn-1.0&at_si=5ab22dcbd70c7596&at_ab=per-2&at_pos=0&at_tot=1
 
-String is immutable in java means its state once craeted if changed it will result into another object.
+String is immutable in java means its state once created if changed it will result into another object.
 means if you change the string object then it will result into a new object.
 for e.g. String str = "abc";
          S.O.P(str.concat("def")); // abcdef
