@@ -1,0 +1,55 @@
+Interview Questions
+
+Difference between SynchronizedMap and ConcurrentHashMap
+What's a singleton, and how would you enforce it
+What's an immutable object
+Is String immutable
+Would String a = "abc" or new String("abc") cause new string objects to be created in the String pool
+Difference between HashMap and HashTable
+Use of Thread.join and what does it do
+Different type of Spring bean scope  
+
+
+Round 1 - What is the difference between Array and ArrayList?  
+Answer Question
+Round 1 - Tell me the flow of the application when you write a program in AngularJS.  
+Answer Question
+Round 1 - What is Maven and why do we need it?  
+Answer Question
+Round 1 - Which dependencies are needed in Spring boot to make it a web application  
+Answer Question
+Round 1 - What is the difference between serialisation and synchronisation in java?  
+Answer Question
+Round 1 - Tell me some new tags that are added in HTML5  
+Answer Question
+Round 1 - Write a query to fetch employee details based on their department.  
+Answer Question
+Round 1 - How Hashmap works internally?  
+Answer Question
+Round 1 - What happens if the both hashcode and equals method result same for a key in Hashmap?  
+Answer Question
+Round 1 - How does the size of Arraylist increases dynamically?  
+Answer Question
+Round 1 - Apart from the Collections interface, which other interface does all the collection classes have?  
+1 Answer
+Round 2 - Tell me about your experience in Spring Boot.  
+Answer Question
+Round 2 - How do you create a basic Spring Boot application and how do you run it?  
+Answer Question
+Round 2 - Where do you put all the properties of your application for Spring Boot?  
+1 Answer
+Round 2 - What are actuators in spring boot?  
+Answer Question
+Round 2 - How does security works in Spring Boot?  
+Answer Question
+Round 2 - How does logging works in Spring Boot? Which is supported by default in Spring boot and which file is needed for the same?  
+1 Answer
+Round 2 - How does messaging works in Spring Boot?  
+Answer Question
+Round 2 - Tell me the flow of Spring MVC application.  
+Answer Question
+Round 3 - Tell me about your roles and responsibilities in your current project  
+Answer Question
+Round 3 - Tell me about your journey so far in your career. Are there any challenges that you have faced?  
+Answer Question
+Round 3 - Why do you want to change your company? 
