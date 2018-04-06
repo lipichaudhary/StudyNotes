@@ -36,6 +36,11 @@ Round 1 - Tell me the flow of the application when you write a program in Angula
 Answer Question
 Round 1 - What is Maven and why do we need it?  
 Answer Question
+Apache Maven is a tool for the management of software project. It is based on concept of POM(project object model). Maven build and manage
+any java project.its used to build the project and reporting and documentation of project from a central piece of information i.e.
+repository(known as Nexus).
+
+
 Round 1 - Which dependencies are needed in Spring boot to make it a web application  
 Answer Question
 Round 1 - What is the difference between serialisation and synchronisation in java?  
