@@ -1,0 +1,10 @@
+Links: http://www.baeldung.com/spring-interview-questions
+
+Spring sub-projects or Modules:
+1. Core: Spring is the most important module and it provides all the fundamental parts of spring framework like IOC or DI
+2. JDBC: tHIS module enables the JDBC abstraction layer that removes the need to do JDBC coding for specific vendor databases.
+3 ORM Integration: to integrate hibernate JPA JDO ....
+Provides the integration layers for popular object relational mapping APIs JPA, JDO and hibernate
+4. Web: A web oriented integration module, providing multipart file upload, servlet listeners and web oriented application context 
+functionalities.
+5. MVC framework: a web module WHICH implements the MVC(Model view controller) design pattern.
