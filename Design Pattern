@@ -1,0 +1,23 @@
+Design pattern assure you a solution for a specific problem/tasks
+2 category: 1. core java design pattern    2. JEE design pattern
+
+a). Core java design pattern
+i) Creational DP
+1. Factory DP 
+2. Abstract Factory DP
+3. Singleton DP
+4. Prototype pattern
+5. Builder Pattern
+
+ii) Structural DP
+1. facade pattern
+2. adapter pattern
+3. Bridge pattern
+4. composite
+5. proxy pattern
+6. Decorator pattern
+7. Flyweight pattern
+
+iii) Behavioral DP
+1. Strategy Pattern
+2. 
