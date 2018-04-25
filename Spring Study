@@ -8,3 +8,15 @@ Provides the integration layers for popular object relational mapping APIs JPA, 
 4. Web: A web oriented integration module, providing multipart file upload, servlet listeners and web oriented application context 
 functionalities.
 5. MVC framework: a web module WHICH implements the MVC(Model view controller) design pattern.
+6. AOP Module: Aspect oriented programming module impementation allows the definition of clean method interceptors and pointcuts.
+
+Dependency Injection: is an aspect of IOC(Inversion of control) which states that you do not create your objects manually instead describe
+how they should be created. An IOC container will instantiate required classes if required.
+
+How can we inject beans in spring:
+1. setter injection
+2. constructor injection
+3. field injection
+
+confuguration can be done using xml files or annotations.
+
