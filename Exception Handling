@@ -1,0 +1,31 @@
+https://www.sanfoundry.com/java-mcqs-exceptional-handling-basics/ 
+ this below one is a nice question
+
+6. What is the output of this program?
+
+    class exception_handling 
+    {
+        public static void main(String args[]) 
+        {
+            try 
+            {
+                System.out.print("Hello" + " " + 1 / 0);
+            }
+            catch(ArithmeticException e) 
+            {
+        	System.out.print("World");        	
+            }
+        }
+    }
+a) Hello
+b) World
+c) HelloWorld
+d) Hello World
+View Answer
+
+Answer: b
+Explanation: System.ou.print() function fist converts the whole parameters into string and then prints, before “Hello” goes to output stream 1 / 0 error is encountered which is cached by catch block printing just “World” .
+Output:
+$ javac exception_handling.java
+$ java exception_handling
+World
