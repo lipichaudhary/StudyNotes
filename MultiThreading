@@ -1,6 +1,67 @@
+https://www.sanfoundry.com/java-mcqs-multithreading-basics/
+
 1. Why is it necessary to call Thread t = new Thread(classObject) constructor for creating thread rather then just calling new thread()?
 2. Why we have wait method in object class while sleep method in thread class?
 3. Why wait, notify and notifyAll() methods are required to be called from synchronized method?
+
+What is true about acquiring object lock before calling wait(), notify() and notifyAll()?
+
+a.it’s mandatory to acquire object lock before calling wait(), notify() and notifyAll() methods on object
+b.If we call wait(), notify() and notifyAll() methods without acquiring object lock i.e. from outside synchronize block then java.lang.IllegalMonitorStateException is thrown at runtime.
+c.wait(), notify() and notifyAll() methods are always called from Synchronized block only
+d.all
+
 4. When do we use wait, notify and notifyAll methods? 
+
+What is true about acquiring object lock before calling wait(), notify() and notifyAll()?
+
+a.it’s mandatory to acquire object lock before calling wait(), notify() and notifyAll() methods on object
+b.If we call wait(), notify() and notifyAll() methods without acquiring object lock i.e. from outside synchronize block then java.lang.IllegalMonitorStateException is thrown at runtime.
+c.wait(), notify() and notifyAll() methods are always called from Synchronized block only
+d.all
+
 5. Whenever an action of threads depends on the action of other thread on the same resource then first thread calls wait method on the resource which releases the lock on the resource and the other thread captures the lock. Now, once other thread lets the resouce to reach to the state where the first thread can work. Then, it notify the first thread to have the lock of the resource and work on it. 	
  
+There are two types of multitasking: Process based multitasking and Thread based multitasking.
+ 6. join() sleep() yield()
+ 7. suspend() and resume()
+ 
+ b.When you call start() method, main thread internally calls run() method to start newly created Thread
+
+
+What are valid points about thread
+
+a.Thread are subdivision of Process.
+b.One or more Threads runs in the context of process.
+c.Threads can execute any part of process. And same part of process can be executed by multiple Threads.
+d.All
+
+What are valid point about processes
+
+a.Processes have their own copy of the data segment of the parent process
+b.Threads have direct access to the data segment of its process
+c.Processes have their own address
+d.All of these
+
+Which of these is valid about threads in java
+
+a.Thread behaviour is unpredictable
+b.execution of Threads depends on Thread scheduler
+c.Same threading program may produce different output in subsequent executions even on same platform
+d.All
+
+
+What are valid statements for suspend() and resume() method?
+
+a.Suspend() method is deadlock prone.
+b.If the target thread holds a lock on object when it is suspended, no thread can lock this object until the target thread is resumed.
+c.If the thread that would resume the target thread attempts to lock this monitor prior to calling resume, it results in deadlock formation.
+d.All
+
+How can Thread go from waiting to runnable state?
+
+a.notify/notifAll
+b.When sleep time is up
+c.Using resume() method when thread was suspended
+d.All
+
