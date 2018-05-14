@@ -1,0 +1,24 @@
+1. WAP to find the smallest and second smallest element in an array.
+
+public class SmallNum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = {12,13,1,10,34,1};
+		int first=arr[0], second = arr[0], temp;
+		for(int i=1;i<arr.length;i++) {
+			if(arr[i]<first) {
+				//temp = first;
+				second = first;
+				first = arr[i];
+				//arr[i]= temp;
+			}
+			else if(arr[i] < second && arr[i] != first) {
+				second = arr[i];
+			}
+		}
+		System.out.println("smallest "+first+" "+"second smallest"+second);
+
+	}
+}
+OUTPUT: SMALLEST(first) = 1 , second smallest = 10
