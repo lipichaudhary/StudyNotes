@@ -22,3 +22,39 @@ public class SmallNum {
 	}
 }
 OUTPUT: SMALLEST(first) = 1 , second smallest = 10
+
+2. WAP to find the length of the longest palindrome in a sentence.
+public class LenPalin {
+	static int length;
+	static int length1=0;
+	
+	public static void lenPalin(String str) {
+		String arr[] = str.split(" ");
+		
+		for(int i=0; i<arr.length;i++) {
+			length = arr[i].length();
+			if(checkPalind(arr[i]) && length>length1) {
+				length1 = length;
+			}
+		}
+		System.out.println("longest palindrome length in a sentence is:"+ length1);
+		
+	}
+	public static boolean checkPalind(String palindStr) {
+		int n = palindStr.length();
+		for(int j=0;j<palindStr.length();j++) {
+			if(palindStr.charAt(j) != palindStr.charAt(n-1)) {
+				return false;
+			}
+			n--;
+		}		
+		return true;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		lenPalin("this is civic from malayalam");
+	}
+
+}
+Output : longest palindrome length in a sentence is: 9
