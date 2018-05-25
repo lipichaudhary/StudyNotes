@@ -34,3 +34,64 @@ For example, Bank and Employee, delete the Bank and the Employee still exist. wh
 the child cannot exist independent of the parent. Example: Human and heart, heart don’t exist separate to a Human
 Type of Relationship: Aggregation relation is “has-a” and composition is “part-of” relation.
 Type of association: Composition is a strong Association whereas Aggregation is a weak Association.
+
+Comparable vs comparator 
+https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
+
+Both of the interfaces are used to sort the objects.
+
+Using Comparable Interface: A comparable object is capable of comparing itself with another object. The class itself must implements the
+java.lang.Comparable interface to compare its instances.
+
+steps:
+for example there is a m,ovie class which have name, rating and year as attributes now if we want to sort them acc. to their year then 
+
+1. create movie class which implements Comparable interface
+   imp. point in Comparable<T> define the type T thats which type of object u r sorting otherwise it will give compile time error
+   public class Movie implements Comparable<Movie>{
+	
+	private double rating;
+	private String name;
+	private int year;
+	
+	public Movie(String name, double rating, int year) {
+		this.name = name;
+		this.rating = rating;
+		this.year = year;
+	}
+   
+2. Provide private variables and public getter methods in oreder to access them
+3. Override compareTo method in Movie and write the sorting logic
+   public int compareTo(Movie m){
+       return this.year-m.year;
+	}
+4. In MainTest class create an arrayList<Movie> of movie type and add elements in that
+    list.add(new Movie("deadpool",4.5,2018));
+ 
+5. then call Collections.sort(list);  // in MainTest class // this sort method will internally call the compareTo() thats y compareTo()
+method should be overrriden in ur movie class to sort the movie by year
+if you don't overrride then it will compile time error that implement all the umimplemented methods from interface
+
+6. after you can print the list which is of movie type as it contains Movie objects thrgh enhanced for loop
+   for(Movie movie: list) {
+			System.out.println(movie.getName()+" "+
+		                       movie.getRating()+" "+
+					           movie.getYear());
+		}
+    
+    
+
+
+
+
+
+
+    
+  
+  
+
+
+
+
+
+
