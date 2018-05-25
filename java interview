@@ -79,7 +79,10 @@ if you don't overrride then it will compile time error that implement all the um
 					           movie.getYear());
 		}
     
-    
+    compareTo(Object obj) returns
+    -ve value(-1) : if this(current) object is less than the specified object(obj) in method
+    zero value(0) : if this(current) object is equal to the specified object(obj) in method
+    +ve value(1) : if this(current) object is greater than the specified object(obj) in method
 
 
 
