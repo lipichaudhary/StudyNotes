@@ -92,8 +92,8 @@ Using Comparator:
 .....................................................................................................................................
 Unlike Comparable, Comparator is external to the element typewe r comparing. for comparator we will create a separate class
 We can create multiple separate classes which implements Comparator to compare the two objects by different members.
-Comparable uses -> compareTo(Movie m) in which oly one object is defined
-Comparator uses -> compare(Movie m1, Movie m2) method in which we can pass 2 objects to compare
+Comparable uses -> compareTo(Movie m) in which oly one object is defined   ; its in java.lang
+Comparator uses -> compare(Movie m1, Movie m2) method in which we can pass 2 objects to compare; its in java.util
 
 Now if we want to compare the movie thrgh rating as well as name along with the year then create separate classes for bth f them 
 and let that class movie implements comparable to sort it trgh year.
