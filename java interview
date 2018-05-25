@@ -84,6 +84,60 @@ if you don't overrride then it will compile time error that implement all the um
     zero value(0) : if this(current) object is equal to the specified object(obj) in method
     +ve value(1) : if this(current) object is greater than the specified object(obj) in method
 
+Now, suppose we want sort movies by their rating and names also.When we make a collection element Comparable(by implememnting comparable 
+interface), we get oly one chance to implement compareTo() method. Hence, solution is comparator 
+
+
+Using Comparator:
+.....................................................................................................................................
+Unlike Comparable, Comparator is external to the element typewe r comparing. for comparator we will create a separate class
+We can create multiple separate classes which implements Comparator to compare the two objects by different members.
+Comparable uses -> compareTo(Movie m) in which oly one object is defined
+Comparator uses -> compare(Movie m1, Movie m2) method in which we can pass 2 objects to compare
+
+Now if we want to compare the movie thrgh rating as well as name along with the year then create separate classes for bth f them 
+and let that class movie implements comparable to sort it trgh year.
+
+output when we had used comparable to sort it tgrh year oly:...............
+Movies after sorting : 
+Star Wars 8.7 1977
+Empire Strikes Back 8.8 1980
+Return of the Jedi 8.4 1983
+Force Awakens 8.3 2015
+
+
+this should be the output:................... when we used comparator
+
+Sorted by rating
+8.3 Force Awakens 2015
+8.4 Return of the Jedi 1983
+8.7 Star Wars 1977
+8.8 Empire Strikes Back 1980
+
+Sorted by name
+Empire Strikes Back 8.8 1980
+Force Awakens 8.3 2015
+Return of the Jedi 8.4 1983
+Star Wars 8.7 1977
+
+Sorted by year
+1977 8.7 Star Wars 
+1980 8.8 Empire Strikes Back 
+1983 8.4 Return of the Jedi 
+2015 8.3 Force Awakens  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
