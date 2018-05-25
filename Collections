@@ -64,11 +64,9 @@ ConcurrentModificationException.
 
 
 
+Difference between fail fast and fail safe 
 
-
-
-
-
+http://javahungry.blogspot.com/2014/04/fail-fast-iterator-vs-fail-safe-iterator-difference-with-example-in-java.html?m=1
 
 
 
