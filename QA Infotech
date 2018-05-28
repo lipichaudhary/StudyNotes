@@ -1,0 +1,9 @@
+1st Round: Telephonic round
+
+1. internal working of hashmap
+2. Concurrent HashMap 
+3. if there are 3 threads that r working on HashMap : T1 and T2 are accessing the hashmap and T3 calls map.clear() on it 
+then what will happen? whether T1 and T2 will return sme value or sme error by T3?
+my Ans: T3 will clear the map so t1 and t2 will return an empty map.
+4.Diff. between ArrayList and LinkedList? 
+why searching is faster in arraylist whereas inserting and deleting from arraylist is more expensive , briefly explain
