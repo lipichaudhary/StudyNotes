@@ -15,6 +15,112 @@ QA Infotech
 SOLUTION: 
 https://github.com/RIP21/Playground/blob/master/java/src/main/java/com/los/TopPhrases.java
 
+package com.codenuclear;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+public class MostFrequentPhrases {
+
+	public static void main(String s[]) {
+		MostFrequentPhrases topPhrases = new MostFrequentPhrases();
+		
+		//Here, consider using your own file path.
+		String filePath = "D:\\Files\\FrequentPhrasesFinderText.txt";
+		Map<String, Long> phrasesCountMap = topPhrases.prepareWordsMap(filePath);
+		List<Entry<String, Long>> sortedList = topPhrases.sortMapByValue(phrasesCountMap);
+
+		Integer count = 0;
+		
+		System.out.println("Most 5 Frequent Phrases are displayed below.");
+		// Evaluate 5 Most frequent Phrases from this loop
+		for (Map.Entry<String, Long> entry : sortedList) {
+
+			if (count == 5) {
+				break;
+			}
+			System.out.println(entry.getKey() + "--> " + entry.getValue());
+			count++;
+		}
+	}
+
+	/**
+	 * This method will return Map of Phrases with their Count
+	 */
+	public Map<String, Long> prepareWordsMap(String fileName) {
+
+		FileReader fr = null;
+		BufferedReader br = null;
+		String currentLine;
+
+		Map<String, Long> phrasesCountMap = new HashMap<String, Long>();
+
+		try {
+			br = new BufferedReader(new FileReader(fileName));
+
+			// Below loop iterate through each line
+			while ((currentLine = br.readLine()) != null) {
+				StringTokenizer strToken = new StringTokenizer(currentLine, "|");
+				// 1 .Split line by pipe | delimiter
+
+				while (strToken.hasMoreTokens()) {
+					String currentPhrase = strToken.nextToken();
+					if (phrasesCountMap.containsKey(currentPhrase)) {
+						phrasesCountMap.put(currentPhrase, phrasesCountMap.get(currentPhrase) + 1);
+					} else {
+						phrasesCountMap.put(currentPhrase, 1L);
+					}
+				}
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+				if (fr != null)
+					fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return phrasesCountMap;
+
+	}
+
+	/**
+	 * This method will return Sorted List of Entry of Phrases, Count
+	 */
+	public List<Entry<String, Long>> sortMapByValue(Map<String, Long> wordMap) {
+
+		Set<Entry<String, Long>> set = wordMap.entrySet();
+		List<Entry<String, Long>> list = new ArrayList<Entry<String, Long>>(set);
+		Collections.sort(list, new Comparator<Map.Entry<String, Long>>() {
+			public int compare(Map.Entry<String, Long> o1, Map.Entry<String, Long> o2) {
+				return (o2.getValue()).compareTo(o1.getValue());
+			}
+		});
+
+		return list;
+	}
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Another solution for above problem 
+--------------------------------------------------------------------------------------------------------------------------------------------
 package com.los;
 
 import java.io.IOException;
