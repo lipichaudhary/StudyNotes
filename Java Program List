@@ -2,3 +2,74 @@ QA Infotech
 1. WAP to print the second largest no. in an array without sorting it.
 2. WAP to print the largest even no. word in a string without using split function.
 3. programming round print an hourglass pattern using ineteger numbers.
+
+
+4. WAP 
+/**
+ * Given a large file that does not fit in memory (say 10GB), find the top 100000
+ * most frequent phrases. The file has 50 phrases per line separated by a pipe (|).
+ * Assume that the phrases do not contain pipe.
+ * Example line may look like: Foobar Candy | Olympics 2012 | PGA | CNET | Microsoft Bing …
+ * The above line has 5 phrases in visible region.
+ *
+SOLUTION: 
+https://github.com/RIP21/Playground/blob/master/java/src/main/java/com/los/TopPhrases.java
+
+package com.los;
+
+import java.io.IOException;
+import java.io.Serializable;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Comparator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+class TopPhrases {
+
+    private PhrasesComparator phrasesComparator = new PhrasesComparator();
+
+    public Map<String, Long> countTopPhrases(String file) {
+        try (Stream<String> stream = Files.lines(Paths.get(file)).parallel()) {
+            return stream
+                    .flatMap(line -> Stream.of(line.split("\\|")))
+                    .map(String::trim)
+                    .map(String::toLowerCase)
+                    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                    .entrySet()
+                    .parallelStream()
+                    .sorted(phrasesComparator::compare)
+                    .limit(100000)
+                    .collect(Collectors.toMap(
+                            Entry::getKey,
+                            Entry::getValue,
+                            (v1, v2) -> v1,
+                            LinkedHashMap::new)
+                    );
+        } catch (IOException e) {
+            throw new FailFastException(e);
+        }
+    }
+}
+
+class PhrasesComparator implements Comparator, Serializable {
+
+    @Override
+    public int compare(Object o1, Object o2) {
+        Entry<String, Long> e1 = (Entry<String, Long>) o1;
+        Entry<String, Long> e2 = (Entry<String, Long>) o2;
+        if (e1.getValue().equals(e2.getValue())) {
+            return e1.getKey().compareTo(e2.getKey());
+        } else return -e1.getValue().compareTo(e2.getValue());
+    }
+}
+
+class FailFastException extends RuntimeException {
+    FailFastException(Exception e) {
+        super(e);
+    }
+}
