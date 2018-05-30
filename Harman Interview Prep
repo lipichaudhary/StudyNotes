@@ -60,26 +60,30 @@ public class FibonacciProg {
 
 
 
-2. Chcek prime number
+2. Chcek prime number: A prime is that which can only be divided by itself or 1. 
+2,3,7,11,19,23 ..... are prime numbers
+its not necessary that all odd numbers are prime for e.g. 21 is odd no. but not prime coz it is divisible by 3
 
-public class PrimeCheck {
+public class IsPrime {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n = 29;
-		boolean isprime = false;
-		
-		if(n==2) {
-			isprime = true;
+		int n =21;
+		boolean isPrime = true;
+		int m = n/2; // divide number n by 2 so 21/2 = 10
+		if(n<=1){
+			isPrime = false;
 		}
-		else if(n%2!=0) {
-			isprime = true;
+		else{
+			for(int i=2;i<=m;i++){ // for loop till m=10 
+				if(n%i==0){ // check from 2 to 10 whether n=21 is divisible anywhere completely
+					isPrime = false;
+				}
+			}
 		}
+		System.out.println("isPrime "+isPrime);
 		
 
-		System.out.println(isprime);
 	}
 
 }
-
-
