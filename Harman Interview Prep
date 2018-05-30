@@ -16,3 +16,49 @@ These are some frequently asked java questions.
 6.       Sort an array using bubble sort algorithm. 
 7.       Selection sort 
 8.       Insertion sort 
+
+
+1. fibonacci series
+
+public class FibonacciProg {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int n1=0, n2=1;
+		System.out.println("enter the size of fibonacci series");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		// without recursion
+		/*for(int i=0;i<n-2;i++) {
+			
+			int n3 = n1 + n2;
+			System.out.print(n3+" ");
+			n1=n2;
+			n2=n3;
+		}*/
+		
+		// using recursion
+		for(int i=0;i<n;i++) {
+		System.out.println(calFib(i)+" ");
+		}
+
+	}
+	
+	public static int calFib(int n) {
+		if(n==0) {
+			return 0;
+		}
+		else if(n==1) {
+			return 1;
+		}
+		return calFib(n-1)+calFib(n-2);
+	}
+
+}
+
+
+
+2. Chcek prime number
+
