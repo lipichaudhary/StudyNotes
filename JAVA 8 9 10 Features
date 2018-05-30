@@ -1,0 +1,96 @@
+JAVA 8 Features:
+
+1. Java 8 Interface Changes – static method, default method
+link : https://www.journaldev.com/2752/java-8-interface-changes-static-method-default-method
+Explaination and example tried by me :
+
+We have defined 2 default methods in interface1 and interface2:
+
+public interface Interface1 {
+	
+	/*
+	 * JAVA 8 Feature: Java Interface Default Method
+	 * .....................................................Important Read it................................................................
+	 * Notice that log(String str) is the default method in interface1. 
+	 * Now if a class implements this interface then it doesn't need to provide an implementation
+	 * for this default method in class.
+	 * ..................................................................................................................................
+	 * This feature will help us in extending interfaces with additional methods, 
+	 * all we need is to provide a default implementation.
+	 * 
+	 * */
+	
+	public abstract void method1(String str);
+	
+	default void log(String str) {
+		System.out.println("I1 Logging: "+str);
+	}
+
+}
+
+public interface Interface2 {
+	
+	void method2();
+	/*
+	 * Here we have given the same default method which is given in interface1
+	 */
+	default void log(String str) {
+		System.out.println("I2 Logging "+str);
+	}
+
+}
+
+public class InterfaceDefaultTest implements Interface1, Interface2{
+
+	/*
+	 * JAVA 8 Feature: Java Interface Default Method
+	 * -----------------------------------------------------------------Important Points---------------------------------------
+	 * Prior to Java 8, we could have only method declarations in the interfaces. 
+	 * But from Java 8, we can have default methods and static methods in the interfaces.
+	 * default methods are introduced bcz there will a tym when interface will grow old and the no.
+	 * of classes implementing it might grow to an extent that its not possible to extend interface
+	 * thats y while designing a application most f the frameworks provide a base implementation
+	 * class and then we extend it and override its method.
+	 * ....................................................................Important Points---------------------------------------
+	 * Therefore this features helps us in extending interfaces with additional methods, all we need 
+	 * is to provide a default implementation.
+	 * 
+	 * */
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void method2() {
+		// TODO Auto-generated method stub
+	
+	}
+
+	@Override
+	public void method1(String str) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/** 
+	 * -------------------------------------------------------------------------------------------------------------------------
+	Case1: Diamond Problem : both default log() were same in both interface I1, I2 
+	Here Diamond problem occurred while calling default log() as there is a conflict that 
+	of which interface log() need to be called? either Interface1 or Interface2
+	----------------------------------------------------------------------------------------------------------------------------
+	therefore it's mandatory to provide implementation for common default methods 
+	otherwise compile time errors occur.
+	----------------------------------------------------------------------------------------------------------------------------
+	Case2: its not necessary to define default methods in class if u hv extended one f the interface.
+	
+	**/
+	@Override
+	public void log(String str) {
+		// TODO Auto-generated method stub
+		Interface1.super.log(str);
+	}
+
+}
+
