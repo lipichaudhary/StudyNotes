@@ -62,3 +62,24 @@ public class FibonacciProg {
 
 2. Chcek prime number
 
+public class PrimeCheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 29;
+		boolean isprime = false;
+		
+		if(n==2) {
+			isprime = true;
+		}
+		else if(n%2!=0) {
+			isprime = true;
+		}
+		
+
+		System.out.println(isprime);
+	}
+
+}
+
+
