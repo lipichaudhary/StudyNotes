@@ -4,6 +4,14 @@
   limit is used in mysql not in Oracle instead Oracle uses rownum()
    
    // we can use Distinct and TOP ; need to study for this 
+   select DISTINCT statement is used to select diffrent values. for e.g. in a column of a table there can be multiple duplicate values so to 
+   list different values we can use DISTINCT
+   
+   Select DISTINCT country from Customers;
+   
+   query to find no.of distinct country
+   
+   select COUNT(DISTINCT country) from customers;
 
 2. Find the second highest salary from employee table
    select MAX(salary) AS salary from Employee where salary< (select MAX(salary) from employee);   
