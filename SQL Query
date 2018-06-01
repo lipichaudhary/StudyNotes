@@ -1,6 +1,8 @@
 1. Find the third highest salary from employee table.
    select MIN(salary) from (select salary from Employee order by salary DESC limit 3);
    
+  limit is used in mysql not in Oracle instead Oracle uses rownum()
+   
    // we can use Distinct and TOP ; need to study for this 
 
 2. Find the second highest salary from employee table
