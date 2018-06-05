@@ -1,0 +1,6 @@
+In OS deadlock occurs when a process or thread enters a waiting state bcz the system resource which was requested  is held by another
+waiting process which in turn is waiting for the another resource held by the another waiting process.
+
+if a process is unable to change its its state indefinitely bcz the resources requested by it are being used by another waiting process
+then the system is said to be in deadlock state.
+
