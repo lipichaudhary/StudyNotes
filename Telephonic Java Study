@@ -1,1 +1,30 @@
 http://www.java67.com/2015/03/top-40-core-java-interview-questions-answers-telephonic-round.html
+
+Diff. b/w ArrayList and LinkedList
+
+1. AL is an index based list whereas LL consist of nodes hvng address of next node also
+2. AL is expensive in terms of insertion and deleltion of data from it compared to LL.
+3. AL is backed up by an array while LL is collection of nodes
+4. AL provides random search if you know the index while LL only allows sequential search 
+5. Searching any element in AL is much easier compared to LL.
+6. Adding and removing an element from the middle of LL is much easier compared to AL bcz it only require to modify links and no other 
+element is rearranged.
+
+Diff. b/w wait, notify, notifyAll
+All these methods are used for inter thread communication.
+1. wait is present in java.lang.object while notify and notifyAll are present in java.lang.thread package.
+2. wait is used to pause the thread based on some condition whereas notify 
+
+
+Difference between Serializable and Externalizable in Java? (detailed answer)
+Serializable is a marker interface with no methods defined it but Externalizable interface has two methods defined on it 
+e.g. readExternal() and writeExternal() which allows you to control the serialization process. 
+Serializable uses default serialization process which can be very slow for some application.
+
+Read more: http://www.java67.com/2015/03/top-40-core-java-interview-questions-answers-telephonic-round.html#ixzz5HXpkAXKV
+Read more: http://www.java67.com/2015/03/top-40-core-java-interview-questions-answers-telephonic-round.html#ixzz5HXpkBgcV
+
+diff. b/w classnotFoundException and NoClassDefFound Excption
+ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.forName() or loadClass() methods 
+and mentioned classes are not found in the classpath.
+NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time
