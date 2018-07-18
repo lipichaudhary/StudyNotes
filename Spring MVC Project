@@ -1,0 +1,7 @@
+#Creating basic spring mvc project using maven
+
+New-> MavenProject -> next -> it will show bunch of archetypes already created for me inside of Maven, inside of the Maven Repository.
+
+An ARCHETYPE is just a DIRECTORY STRUTURE that follows the format i want to use and does some default things for me.
+
+Artifact ID is my application name.
