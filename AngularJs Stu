@@ -2,6 +2,9 @@ AngularJS2Study file
 Source 1: https://www.youtube.com/watch?v=7qq9VDO_28k&list=PLqq-6Pq4lTTbWLgk2YspgXA_xORzD0Ax6
 Source 2: https://www.w3schools.com/angular/default.asp
 
+Javascript study file
+https://www.youtube.com/results?search_query=javascript+for+developers+java+brains
+
 ||Before We begin with AngularJS||
 AngularJS is an javascript framework. Before we begin with angularJS, lets check why do we even need framework for javascipt? 
 Why do we have javascript frameworks like angularjs, amber, reactjs and other at the first place? Well, when we do client side scripting by using raw javascript code then it first uses DOM object to get the element, performs some logic to get the data and finally it modify the element.  This way the code looks messy. Also, the problem that server side developer for really long period about separating the concern is also looks the predominent in client side scripting. Therefore, to write more elegant code with proper separation of concern we should use client side frameworks esp in large enterprise aplications. 
