@@ -20,3 +20,15 @@ How can we inject beans in spring:
 
 confuguration can be done using xml files or annotations.
 
+Spring MVC Model:
+https://www.codejava.net/frameworks/spring/spring-mvc-beginner-tutorial-with-spring-tool-suite-ide
+
+1. Spring Dispatcher servlet: Works as a front controller b/w spring application and all clients.Is a dispatcher servlet which intercepts all the request coming to the application and then it consults with handler mapping to decide that which controller need to be invoked to handle the requests.
+2. Handler Mapping: finds the appropriate controller for each request. The mapping b/w the requested URL's and controller classes is done via XML configuration or annotations.
+3. Controller: is responsible for processing the requests by calling other business/ service classes. whatever be the output it will be attached to the model objects which will sent to the view.To know that to which view the output should be rendered controller consults the view resolver.
+4. View Resolver: find the physical view files from the logical names.
+5. View: physical files like JSP,HTML, XML, velocity template etc.
+
+
+
+
