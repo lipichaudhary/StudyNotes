@@ -31,4 +31,16 @@ https://www.codejava.net/frameworks/spring/spring-mvc-beginner-tutorial-with-spr
 
 
 
+@Controller annotation marks this class as Spring Bean which will handle different HTTP request based on mapping specified on class or individual controller methods.
 
+@RequestMapping annotation is used for mapping the web requests onto specific handler classes and handler methods. 
+
+In our case we have applied it on class level too, which says that this class is default handler for all HTTP requests of type '/'.
+@RequestMapping("/")
+public class HelloWorldController {
+}
+
+@RequestMapping have several attributes[value, method, params..] which can be used to narrow down your mapping to more specific selection.
+
+First Method does not have any URL mapping declared, so it will inherit the mapping from mapping declared on class level, acting as default 
+handler for GET requests.
