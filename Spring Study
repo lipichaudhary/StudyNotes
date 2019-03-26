@@ -41,6 +41,26 @@ public class HelloWorldController {
 }
 
 @RequestMapping have several attributes[value, method, params..] which can be used to narrow down your mapping to more specific selection.
-
+@RequestMapping("/")
 First Method does not have any URL mapping declared, so it will inherit the mapping from mapping declared on class level, acting as default 
 handler for GET requests.
+@RequestMappin(method= RequestMapping.GET)
+Below second mehod due to additional mapping declaration with value attribute 
+@RequestMapping(value="/helloagain" , method= RequestMapping.GET)
+
+@Controller // annotation marks this class as the spring bean which handles all kinds of HTTP request based on mapping specified on class or on individual controller method.
+@RequestMapping("/") // this annotation means this class is the default handler for all the HTTP request of type '/' as this annotation is applied on class level
+public class HelloWorldController
+{
+	  @RequestMapping(method = RequestMethod.GET)
+      public String sayHello(){
+    	  
+    	  return "welcome";
+      }
+	
+	
+}
+
+
+
+
