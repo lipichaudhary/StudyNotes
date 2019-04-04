@@ -1,0 +1,9 @@
+Quartz Schedular : This is an open source schedular library which we can integrate with any Java Application.
+
+For our project application , A mobile application is in progress , there is a requirement for PUSH NOTIFICATION for mobile view.
+Requirement : PUSH Notification : client related notification will appear in mobile view.
+For this requirement , we need Quartz Schedular which will run the jobs.
+
+Implementation: 
+1. We have integrated the Jar files of Quarz into our project
+2. We have written the CRON Expressions to run the scheduled jobs.
