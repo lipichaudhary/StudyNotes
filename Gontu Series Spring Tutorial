@@ -1,0 +1,4 @@
+1. Create a new java file - Restaurant 
+2. Create a Spring Configuration File - SpringConfig.xml 
+    -> for managing all java objects and classes in our spring application
+3. Write a test class
